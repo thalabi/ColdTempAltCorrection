@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/altitude5CorrectedTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:width="100dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/altitude5EditText"
+        app:layout_constraintTop_toBottomOf="@+id/altitude4EditText" />
+
+    <EditText
+        android:id="@+id/altitude5EditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:width="100dp"
+        android:height="10dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:inputType=""
+        android:minHeight="48dp"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/altitude4EditText" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:labelFor="@id/altitude4EditText"
+        android:text="@string/alt_4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/altitude3EditText" />
+
+    <EditText
+        android:id="@+id/elevationEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:width="100dp"
+        android:height="10dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:inputType=""
+        android:minHeight="48dp"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:labelFor="@id/temperatureEditText"
+        android:text="@string/elev"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <TextView
+        android:id="@+id/altitude4CorrectedTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:width="100dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/altitude4EditText"
+        app:layout_constraintTop_toBottomOf="@+id/altitude3EditText" />
+
+    <EditText
+        android:id="@+id/altitude4EditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:width="100dp"
+        android:height="10dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:inputType=""
+        android:minHeight="48dp"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/altitude3EditText" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:labelFor="@id/altitude4EditText"
+        android:text="@string/alt_5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/altitude4EditText" />
+
+    <TextView
+        android:id="@+id/altitude3CorrectedTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:width="100dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/altitude3EditText"
+        app:layout_constraintTop_toBottomOf="@+id/altitude2EditText" />
+
+    <EditText
+        android:id="@+id/altitude3EditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:width="100dp"
+        android:height="10dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:inputType=""
+        android:minHeight="48dp"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/altitude2EditText" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:labelFor="@id/altitude3EditText"
+        android:text="@string/alt_3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/altitude2EditText" />
+
+    <EditText
+        android:id="@+id/altitude2EditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:width="100dp"
+        android:height="10dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:inputType=""
+        android:minHeight="48dp"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/altitude1EditText" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:labelFor="@id/altitude2EditText"
+        android:text="@string/alt_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/altitude1EditText" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:labelFor="@id/temperatureEditText"
+        android:text="@string/temp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/elevationEditText" />
+
+    <EditText
+        android:id="@+id/temperatureEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:width="100dp"
+        android:height="10dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:inputType=""
+        android:minHeight="48dp"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/elevationEditText" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:labelFor="@id/altitude1EditText"
+        android:text="@string/alt_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/temperatureEditText" />
+
+    <EditText
+        android:id="@+id/altitude1EditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:width="100dp"
+        android:height="10dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:inputType=""
+        android:minHeight="48dp"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/temperatureEditText" />
+
+    <TextView
+        android:id="@+id/altitude1CorrectedTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:width="100dp"
+        android:height="40dp"
+        android:text=""
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/altitude1EditText"
+        app:layout_constraintTop_toBottomOf="@+id/temperatureEditText" />
+
+    <!-- row ? - cacl button -->
+
+    <TextView
+        android:id="@+id/altitude2CorrectedTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:width="100dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/altitude2EditText"
+        app:layout_constraintTop_toBottomOf="@+id/altitude1EditText" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:background="@android:color/holo_blue_dark"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
