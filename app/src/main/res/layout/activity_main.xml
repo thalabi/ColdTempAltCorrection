@@ -274,6 +274,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="65dp"
         android:layout_marginTop="24dp"
+        android:backgroundTint="@android:color/holo_blue_dark"
         android:text="@string/clear"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/altitude5EditText" />
