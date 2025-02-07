@@ -14,6 +14,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -132,6 +133,33 @@ public class MainActivity extends AppCompatActivity {
         altitude3EditText.addTextChangedListener(new GenericTextWatcher(Field.ALTITUDE_THREE));
         altitude4EditText.addTextChangedListener(new GenericTextWatcher(Field.ALTITUDE_FOUR));
         altitude5EditText.addTextChangedListener(new GenericTextWatcher(Field.ALTITUDE_FIVE));
+
+        Button clearButton = findViewById(R.id.clearButton);
+        clearButton.setOnClickListener(view -> {
+            // Code here executes on main thread after user presses button
+            elevation = 0;
+            temperature = 0;
+            altitude1 = 0;
+            altitude2 = 0;
+            altitude3 = 0;
+            altitude4 = 0;
+            altitude5 = 0;
+            elevationEditText = (EditText) findViewById(R.id.elevationEditText);
+            elevationEditText.setText(elevation != 0 ? String.valueOf(elevation) : "");
+            temperatureEditText = (EditText) findViewById(R.id.temperatureEditText);
+            temperatureEditText.setText(temperature != 0 ? String.valueOf(temperature) : "");
+            altitude1EditText = (EditText) findViewById(R.id.altitude1EditText);
+            altitude1EditText.setText(altitude1 != 0 ? String.valueOf(altitude1) : "");
+            altitude2EditText = (EditText) findViewById(R.id.altitude2EditText);
+            altitude2EditText.setText(altitude2 != 0 ? String.valueOf(altitude2) : "");
+            altitude3EditText = (EditText) findViewById(R.id.altitude3EditText);
+            altitude3EditText.setText(altitude3 != 0 ? String.valueOf(altitude3) : "");
+            altitude4EditText = (EditText) findViewById(R.id.altitude4EditText);
+            altitude4EditText.setText(altitude4 != 0 ? String.valueOf(altitude4) : "");
+            altitude5EditText = (EditText) findViewById(R.id.altitude5EditText);
+            altitude5EditText.setText(altitude5 != 0 ? String.valueOf(altitude5) : "");
+        });
+
     }
 
 
