@@ -51,7 +51,8 @@ public class SettingsActivity extends AppCompatActivity {
         button.setOnClickListener(view -> {
             // Code here executes on main thread after user presses button
             Log.d("SettingsActivity", "setOnClickListener saveSettingsButton");
-            saveRoundingOption(getRoundingOption());
+            saveRoundingOptionAndExit();
+            //saveRoundingOption(getRoundingOption());
         });
 
     }
@@ -75,7 +76,7 @@ public class SettingsActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public ColdWxCorrection.RoundingOption getRoundingOption () {
+    private ColdWxCorrection.RoundingOption getRoundingOption () {
         var roundingButtonSelected = ((RadioGroup)findViewById(R.id.roundingOptionRadioGroup)).getCheckedRadioButtonId();
         if (roundingButtonSelected == -1) {
             throw new RuntimeException("Rounding radio button should be selected.");
@@ -92,7 +93,9 @@ public class SettingsActivity extends AppCompatActivity {
         }
     }
 
-    public void saveRoundingOption (ColdWxCorrection.RoundingOption roundingOption) {
+    private void saveRoundingOptionAndExit() {
+
+        var roundingOption = getRoundingOption ();
 
         SharedPreferencesUtil.writeSettings2(getApplicationContext(), roundingOption);
 
@@ -100,6 +103,6 @@ public class SettingsActivity extends AppCompatActivity {
         intent.putExtra("roundingOption", roundingOption.getIntValue());
         setResult(RESULT_OK, intent);
         finish();
-    }
 
+    }
 }

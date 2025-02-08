@@ -2,8 +2,10 @@ package com.kerneldc.coldtempaltcorrection;
 
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -30,9 +32,11 @@ public class AboutActivity extends AppCompatActivity {
 //        Toolbar toolbar = findViewById(R.id.toolbar);
 //        setSupportActionBar(toolbar);
 
-        String versionName = "N/A";
-        String buildTimestamp = "N/A";
+        CharSequence appName = "N/A";
+        var versionName = "N/A";
+        var buildTimestamp = "N/A";
         try {
+            appName = getApplicationContext().getApplicationInfo().loadLabel(getPackageManager());
             versionName = getPackageManager().getPackageInfo(getPackageName(), 0).versionName;
             long buildTimestampLong = getPackageManager().getPackageInfo(getPackageName(), 0).lastUpdateTime;
             buildTimestamp = SimpleDateFormat.getInstance().format(buildTimestampLong);
@@ -41,11 +45,19 @@ public class AboutActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        TextView versionTextView = (TextView) findViewById(R.id.versionTextView);
+        var appNameTextView = (TextView) findViewById(R.id.appNameTextView);
+        appNameTextView.setText(appName);
+        var versionTextView = (TextView) findViewById(R.id.versionTextView);
         versionTextView.setText(versionName);
         //buildTimestamp
-        TextView buildTimestampTextView = (TextView) findViewById(R.id.buildTimestampTextView);
+        var buildTimestampTextView = (TextView) findViewById(R.id.buildTimestampTextView);
         buildTimestampTextView.setText(buildTimestamp);
+
+        Button backButton = findViewById(R.id.backButton);
+        backButton.setOnClickListener(view -> {
+            finish();
+        });
+
     }
 
     @Override
