@@ -8,6 +8,7 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.InputFilter;
+import android.text.InputType;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.Menu;
@@ -124,6 +125,15 @@ public class MainActivity extends AppCompatActivity {
         altitude4EditText.setText(altitude4 != 0 ? String.valueOf(altitude4) : "");
         altitude5EditText = (EditText) findViewById(R.id.altitude5EditText);
         altitude5EditText.setText(altitude5 != 0 ? String.valueOf(altitude5) : "");
+
+        // Turn on numeric keypad
+        elevationEditText.setInputType(InputType.TYPE_CLASS_NUMBER);
+        temperatureEditText.setInputType(InputType.TYPE_CLASS_NUMBER  | InputType.TYPE_NUMBER_FLAG_SIGNED);
+        altitude1EditText.setInputType(InputType.TYPE_CLASS_NUMBER);
+        altitude2EditText.setInputType(InputType.TYPE_CLASS_NUMBER);
+        altitude3EditText.setInputType(InputType.TYPE_CLASS_NUMBER);
+        altitude4EditText.setInputType(InputType.TYPE_CLASS_NUMBER);
+        altitude5EditText.setInputType(InputType.TYPE_CLASS_NUMBER);
 
         // add a GenericTextWatcher to each of the fields
         elevationEditText.addTextChangedListener(new GenericTextWatcher(Field.ELEVATION));
